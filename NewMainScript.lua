@@ -96,4 +96,4 @@ if not shared.VapeDeveloper then
 		error("Failed to connect to github, please try using a VPN.")
 	end
 end
-return loadstring(vapeGithubRequest("MainScript.lua"))()
+return loadfile("vape/MainScript")
