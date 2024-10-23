@@ -232,9 +232,9 @@ if not isfile("vape/CustomModules/cachechecked.txt") then
 					if suc and publicrepo and publicrepo ~= "404: Not Found" then
 						writefile("vape/CustomModules/"..last, "--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.\n"..publicrepo)
 					end
+					end
 				end
-			end
-		end})
+			end})
 	end
 	writefile("vape/CustomModules/cachechecked.txt", "verified")
 end
