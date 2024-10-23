@@ -1,4 +1,4 @@
---This watermark is used to delete the file if its cached, remove it to make the file persist after commits.
+
 local GuiLibrary = shared.GuiLibrary
 local Combat = GuiLibrary.ObjectsThatCanBeSaved.CombatWindow.Api
 local Blatant = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api
