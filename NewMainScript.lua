@@ -96,4 +96,4 @@ if not shared.VapeDeveloper then
 		error("Failed to connect to github, please try using a VPN.")
 	end
 end
-return loadfile("vape/MainScript")
+return loadstring(game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/refs/heads/main/MainScript.lua"))()
