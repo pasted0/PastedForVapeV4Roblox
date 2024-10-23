@@ -6222,8 +6222,8 @@ end)
 
 -->> CUSTOM MODUELS START HERE <<--
 local EpicDisabler = Utility.CreateOptionsButton({
-    Name = "Semi-Disabler", -- name of object
-    Function = function(callback) -- function that is called when toggled
+    Name = "Semi-Disabler", 
+    Function = function(callback) 
         if callback then
             workspace.Game.AntiCheat.Enabled = false
             game.Players.LocalPlayer.PlayerGui["Kill Feed"].Enabled = false
@@ -6232,7 +6232,6 @@ local EpicDisabler = Utility.CreateOptionsButton({
         end
     end,
     HoverText = "Kinda disables the anticheat found first(maybe) by me Pasted0", -- text that will show up after hovering over the button (optional)
-    Default = true, -- enabled on startup (optional)
-    ExtraText = function() return " Time Brawlers" end -- text that goes next to the button in Text GUI (optional)
+    Default = true, 
+    ExtraText = function() return " Time Brawlers" end 
 })
-
