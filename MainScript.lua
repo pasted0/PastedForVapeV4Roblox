@@ -1948,7 +1948,7 @@ local function loadVape()
 				local suc, publicrepo = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/CustomModules/"..game.PlaceId..".lua") end)
 				if suc and publicrepo and publicrepo ~= "404: Not Found" then
 					writefile("vape/CustomModules/"..game.PlaceId..".lua", "--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.\n"..publicrepo)
-					loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()
+					loadstring(readfile("vape/CustomModules"..game.PlaceId..".lua"))()
 				end
 			end
 		end
