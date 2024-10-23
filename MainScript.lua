@@ -2003,3 +2003,4 @@ if shared.VapeIndependent then
 else
 	loadVape()
 end
+warn("mainscript working")

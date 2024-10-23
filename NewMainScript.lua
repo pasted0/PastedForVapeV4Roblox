@@ -96,5 +96,5 @@ if not shared.VapeDeveloper then
 		error("Failed to connect to github, please try using a VPN.")
 	end
 end
-
-return loadfile("vape/MainScript")
+return loadstring(vapeGithubRequest("MainScript.lua"))() -- how delta executor feels after crying abt not being able to read so i have to switch this back and put print in every section to see whats causing the issue
+warn("newmainscript working")
