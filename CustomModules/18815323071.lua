@@ -6228,7 +6228,7 @@ local EpicDisabler = Utility.CreateOptionsButton({
             workspace.Game.AntiCheat:Destroy()
             game.Players.LocalPlayer.PlayerGui["Kill Feed"]:Destroy()
         else
-			CreateNotification("anticheat disabled it can not be renabled")
+			CreateNotification("Warning", "support for this game has discontinued indefinitely.", 25)
 		end
     end,
     HoverText = "Kinda disables the anticheat found first(maybe) by me Pasted0", -- text that will show up after hovering over the button (optional)
