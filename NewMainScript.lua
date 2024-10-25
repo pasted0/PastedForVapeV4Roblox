@@ -8,6 +8,9 @@ local isfile = isfile or function(file)
 	return suc and res ~= nil
 end
 local delfile = delfile or function(file) writefile(file, "") end
+if identifyexecutor = "Delta" then
+	displayErrorPopup("Stop using this shit executor🙏")
+end
 
 local function displayErrorPopup(text, func)
 	local oldidentity = getidentity()
