@@ -8,9 +8,7 @@ local isfile = isfile or function(file)
 	return suc and res ~= nil
 end
 local delfile = delfile or function(file) writefile(file, "") end
-if identifyexecutor = "Delta" then
-	displayErrorPopup("Stop using this shit executor🙏")
-end
+
 
 local function displayErrorPopup(text, func)
 	local oldidentity = getidentity()
@@ -46,6 +44,10 @@ local function vapeGithubRequest(scripturl)
 		if not suc or res == "404: Not Found" then
 			if identifyexecutor and ({identifyexecutor()})[1] == 'Wave' then 
 				displayErrorPopup('Stop using detected garbage, Vape will not work on such garabge until they fix BOTH HttpGet & file functions.')
+				error(res)
+			end
+			if identifyexecutor and ({identifyexecutor()})[1] == 'Delta' then 
+				displayErrorPopup('Stop using garbage, Pasted will not work on this garabge until they fix loadfile and readfile')
 				error(res)
 			end
 			displayErrorPopup("Failed to connect to github : vape/"..scripturl.." : "..res)
