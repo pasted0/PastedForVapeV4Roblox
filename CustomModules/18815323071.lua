@@ -20,6 +20,7 @@ local vapeConnections = {}
 local vapeCachedAssets = {}
 local vapeTargetInfo = shared.VapeTargetInfo
 local vapeInjected = true
+CreateNotification("Warning", "This games support has ended indefiniely", 25)
 table.insert(vapeConnections, workspace:GetPropertyChangedSignal("CurrentCamera"):Connect(function()
 	gameCamera = workspace.CurrentCamera or workspace:FindFirstChildWhichIsA("Camera")
 end))
@@ -57,7 +58,7 @@ end
 
 local function vapeGithubRequest(scripturl)
 	if not isfile("vape/"..scripturl) then
-		local suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
+		local suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/refs/heads/main/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
 		assert(suc, res)
 		assert(res ~= "404: Not Found", res)
 		if scripturl:find(".lua") then res = "--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.\n"..res end
@@ -6228,7 +6229,7 @@ local EpicDisabler = Utility.CreateOptionsButton({
             workspace.Game.AntiCheat:Destroy()
             game.Players.LocalPlayer.PlayerGui["Kill Feed"]:Destroy()
         else
-			CreateNotification("Warning", "support for this game has discontinued indefinitely.", 25)
+			CreateNotification("Warning", "since theres no more support for this game this may not work", 10)
 		end
     end,
     HoverText = "Kinda disables the anticheat found first(maybe) by me Pasted0", -- text that will show up after hovering over the button (optional)
