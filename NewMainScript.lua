@@ -47,7 +47,7 @@ local function vapeGithubRequest(scripturl)
 				error(res)
 			end
 			if identifyexecutor and ({identifyexecutor()})[1] == 'Delta' then 
-				displayErrorPopup('Stop using garbage, Pasted will not work on this garabge until they fix loadfile and readfile')
+				displayErrorPopup('Stop using this garbage, pasted will not work on this garabge until they fix loadfile and readfile')
 				error(res)
 			end
 			displayErrorPopup("Failed to connect to github : vape/"..scripturl.." : "..res)
