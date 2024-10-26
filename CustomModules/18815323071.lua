@@ -186,7 +186,7 @@ do
 				local currenttime = tick()
 				for i, v in pairs(postable) do
 					local mag = 0.1 - (currenttime - v.Time)
-					if mag < closestmag and mag > 0 then
+					if mag < closestmag and mag > 0 then 
 						closestmag = mag
 						closestpos = v.Position
 					end
