@@ -30,7 +30,9 @@ local function displayErrorPopup(text, func)
 	prompt:_open(text)
 	setidentity(oldidentity)
 end
-
+if shared.VapeDeveloper = true then
+	displayErrorPopup("Make sure shared vape developer is = to falde before ex ")
+end
 local function vapeGithubRequest(scripturl)
 	if not isfile("vape/"..scripturl) then
 		local suc, res
