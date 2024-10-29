@@ -1,4 +1,8 @@
-
+if placeID == 18815323071 then
+CreateNotification("loaded", "Made by Pasted0 this is recontinued now", 10)
+else
+game.Players.LocalPlayer.Kick("An Error Occurred")
+end
 local GuiLibrary = shared.GuiLibrary
 local Combat = GuiLibrary.ObjectsThatCanBeSaved.CombatWindow.Api
 local Blatant = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api
