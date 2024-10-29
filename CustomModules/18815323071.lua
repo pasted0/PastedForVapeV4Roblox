@@ -24,7 +24,6 @@ local vapeConnections = {}
 local vapeCachedAssets = {}
 local vapeTargetInfo = shared.VapeTargetInfo
 local vapeInjected = true
-CreateNotification("Warning", "This games support has ended indefiniely", 25)
 table.insert(vapeConnections, workspace:GetPropertyChangedSignal("CurrentCamera"):Connect(function()
 	gameCamera = workspace.CurrentCamera or workspace:FindFirstChildWhichIsA("Camera")
 end))
