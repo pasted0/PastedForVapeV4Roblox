@@ -34,7 +34,7 @@ local function displayErrorPopup(text, func)
 end
 
 
-if shared.PastedDeveloper = true then
+if shared.PastedDeveloper == true then
 	loadfile("vape/DevNewMainScript")
 	displayErrorPopup("90% chance ur not the owner but you cant even use ts cuz its a file that only i have 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑")
 end
