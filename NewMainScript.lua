@@ -1,4 +1,6 @@
 --This watermark is used to delete the file if its cached, remove it to make the file persist after commits.
+-- i miss good pc executors ):
+local lplr = game.Players.LocalPlayer
 if getgenv and not getgenv().shared then getgenv().shared = {} end
 local errorPopupShown = false
 local setidentity = syn and syn.set_thread_identity or set_thread_identity or setidentity or setthreadidentity or function() end
@@ -31,8 +33,16 @@ local function displayErrorPopup(text, func)
 	setidentity(oldidentity)
 end
 
+
+if shared.PastedDeveloper = true then
+	loadfile("vape/DevNewMainScript")
+	displayErrorPopup("90% chance ur not the owner but you cant even use ts cuz its a file that only i have 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑")
+end
+
+
 if shared.VapeDeveloper = true then
 	displayErrorPopup("Make sure shared vape developer is = to false before execution")
+	lplr:kick("Disable vape developer before using")
 end
 
 local function vapeGithubRequest(scripturl)
