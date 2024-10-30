@@ -40,7 +40,7 @@ if shared.PastedDeveloper == true then
 end
 
 
-if shared.VapeDeveloper = true then
+if shared.VapeDeveloper == true then
 	displayErrorPopup("Make sure shared vape developer is = to false before execution")
 	lplr:kick("Disable vape developer before using")
 end
