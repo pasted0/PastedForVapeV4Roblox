@@ -78,7 +78,7 @@ local function GetURL(scripturl)
 	if shared.VapeDeveloper then
 		return readfile("vape/"..scripturl)
 	else
-		return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Eoblpx"..scripturl, true)
+		return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox"..scripturl, true)
 	end
 end
 
