@@ -36,7 +36,7 @@ end
 
 if shared.PastedDeveloper == true then
 	loadfile("vape/DevNewMainScript")
-	displayErrorPopup("you cant even use ts cuz its a file that only i have 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑")
+	displayErrorPopup("you cant even use ts cuz its a file that only i have 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑")
 end
 
 
@@ -54,7 +54,7 @@ local function vapeGithubRequest(scripturl)
 				displayErrorPopup("The connection to github is taking a while, Please be patient.")
 			end
 		end)
-		suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/refs/heads/main"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
+		suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/refs/heads/main".. "/"..scripturl, true) end)
 			if not suc or res == "404: Not Found" then
 			if identifyexecutor and ({identifyexecutor()})[1] == 'Wave' then 
 				displayErrorPopup('Stop using detected garbage, Vape will not work on such garabge until they fix BOTH HttpGet & file functions.')
