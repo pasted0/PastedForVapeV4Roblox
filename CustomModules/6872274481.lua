@@ -10047,3 +10047,20 @@ run(function()
 		List = options
 	})
 end)
+local Disablerv2 = Render.CreateOptionsButton({
+    Name = "Semi-Disabler", -- name of object
+    Function = function(callback) -- function that is called when toggled
+        if callback then
+		while task.wait(1) do 
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+			task.wait(0.5)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+			end
+        else
+            print("disabled")
+        end
+    end,
+    HoverText = "Shitty anticheat disabler made by pasted0", 
+    Default = false, 
+    ExtraText = function() return " FakeLag (we ❤️ the bw anticheat)" end 
+})
