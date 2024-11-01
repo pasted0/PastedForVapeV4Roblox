@@ -10047,7 +10047,8 @@ run(function()
 		List = options
 	})
 end)
-local Disablerv2 = Render.CreateOptionsButton({
+
+local Disablerv2 = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api({
     Name = "Semi-Disabler", -- name of object
     Function = function(callback) -- function that is called when toggled
         if callback then
@@ -10057,10 +10058,28 @@ local Disablerv2 = Render.CreateOptionsButton({
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 			end
         else
-            print("disabled")
+		CreateWarning("Warning", "You Have To Reset To Turn This Off",5)
         end
     end,
     HoverText = "Shitty anticheat disabler made by pasted0", 
     Default = false, 
     ExtraText = function() return " FakeLag (we ❤️ the bw anticheat)" end 
 })
+
+
+
+local AntiDeath = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api
+      Name = "Anti-Death"
+	  Function = function(callback)
+		if callback then
+
+		else
+
+		end
+	end
+})
+
+
+ -- button name + OptionsButton
+ -- button can be a var, else you use GuiLibrary.ObjectsThatCanBeSaved.ESPOptionsButton.Api to get objects outside your code.
+ --GuiLibrary.ObjectsThatCanBeSaved.InfiniteFlyOptionsButton.Api.button.ToggleButton(true) -- toggles button
