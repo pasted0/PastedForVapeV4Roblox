@@ -34,13 +34,13 @@ local function displayErrorPopup(text, func)
 end
 
 
-if shared.PastedDeveloper == true then
+if shared.PastedDeveloper then
 	loadfile("vape/DevNewMainScript")
 	displayErrorPopup("you cant even use ts cuz its a file that only i have 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑")
 end
 
 
-if shared.VapeDeveloper == true then
+if shared.VapeDeveloper then
 	displayErrorPopup("Make sure shared vape developer is = to false before execution")
 	lplr:kick("Disable vape developer before using")
 end
