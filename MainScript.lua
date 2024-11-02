@@ -1941,12 +1941,12 @@ GeneralSettings.CreateButton2({
 
 local function loadVape()
 	if not shared.VapeIndependent then
-		loadstring(vapeGithubRequest("18815323071.lua"))()
+		loadstring(vapeGithubRequest("Universal.lua"))()
 		if isfile("vape/CustomModules/"..game.PlaceId..".lua") then
 			loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()
 		else
 			if not shared.VapeDeveloper then
-				local suc, publicrepo = pcall(function() return game:HttpGet("https://github.com/pasted0/PastedForVapeV4Roblox/blob/main/CustomModules/18815323071.lua"..readfile("vape/commithash.txt").."/CustomModules/"..game.PlaceId..".lua") end)
+				local suc, publicrepo = pcall(function() return game:HttpGet("https://github.com/pasted0/PastedForVapeV4Roblox/blob/main/CustomModules/"..readfile("vape/commithash.txt").."/CustomModules/"..game.PlaceId..".lua") end)
 				if suc and publicrepo and publicrepo ~= "404: Not Found" then
 					writefile("vape/CustomModules/"..game.PlaceId..".lua", "--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.\n"..publicrepo)
 					loadstring(readfile("vape/CustomModules"..game.PlaceId..".lua"))()
