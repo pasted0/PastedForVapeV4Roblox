@@ -1,6 +1,5 @@
 -- i miss good pc executors ):
 
-local lplr = game.Players.LocalPlayer
 if getgenv and not getgenv().shared then getgenv().shared = {} end
 local errorPopupShown = false
 local setidentity = syn and syn.set_thread_identity or set_thread_identity or setidentity or setthreadidentity or function() end
@@ -10,7 +9,6 @@ local isfile = isfile or function(file)
 	return suc and res ~= nil
 end
 local delfile = delfile or function(file) writefile(file, "") end
-
 
 local function displayErrorPopup(text, func)
 	local oldidentity = getidentity()
@@ -32,9 +30,6 @@ local function displayErrorPopup(text, func)
 	prompt:_open(text)
 	setidentity(oldidentity)
 end
-
-
-
 
 local function vapeGithubRequest(scripturl)
 	if not isfile("vape/"..scripturl) then
@@ -102,4 +97,5 @@ if not shared.VapeDeveloper then
 		error("Failed to connect to github, please try using a VPN.")
 	end
 end
+
 return loadstring(vapeGithubRequest("MainScript.lua"))()
