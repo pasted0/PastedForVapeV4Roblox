@@ -10065,21 +10065,3 @@ local Disablerv2 = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api({
     Default = false, 
     ExtraText = function() return " FakeLag (we ❤️ the bw anticheat)" end 
 })
-
-
-
-local AntiDeath = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api
-      Name = "Anti-Death"
-	  Function = function(callback)
-		if callback then
-
-		else
-
-		end
-	end
-})
-
-
- -- button name + OptionsButton
- -- button can be a var, else you use GuiLibrary.ObjectsThatCanBeSaved.ESPOptionsButton.Api to get objects outside your code.
- --GuiLibrary.ObjectsThatCanBeSaved.InfiniteFlyOptionsButton.Api.button.ToggleButton(true) -- toggles button
