@@ -1,4 +1,4 @@
-
+print("nigg")
 --i have to add this commit msg cuz github sucks
 repeat task.wait() until game:IsLoaded()
 local GuiLibrary
