@@ -36,11 +36,6 @@ end
 
 
 
-if shared.VapeDeveloper then
-	displayErrorPopup("Make sure shared vape developer is = to false before execution")
-	lplr:kick("Disable vape developer before using")
-end
-
 local function vapeGithubRequest(scripturl)
 	if not isfile("vape/"..scripturl) then
 		local suc, res
