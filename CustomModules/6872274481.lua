@@ -10010,7 +10010,7 @@ local Disablerv2 = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api({
 
 part = Instance.new("Part", game.Players.LocalPlayer.Character)
 local Antihit = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api({
-    Name = "AntiHit", -- name of object
+    Name = "AntiHit",
     Function = function(callback) 
         if callback then
 			part.Size = Vector3.new(1,1,1)
@@ -10018,7 +10018,7 @@ local Antihit = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api({
 			part.CanCollide = false
 			while task.wait(0.2) do
 				part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,10,0)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = prt.CFrame 
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = part.CFrame 
 				task.wait(0.1)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = part - Vector3.new(0,10,0)
 			else
