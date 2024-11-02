@@ -34,10 +34,6 @@ local function displayErrorPopup(text, func)
 end
 
 
-if shared.PastedDeveloper then
-	loadfile("vape/DevNewMainScript")
-	displayErrorPopup("you cant even use ts cuz its a file that only i have 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑")
-end
 
 
 if shared.VapeDeveloper then
