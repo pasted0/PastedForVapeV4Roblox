@@ -9010,3 +9010,20 @@ task.spawn(function()
 		AutoLeave.ToggleButton(false)
 	end
 end)
+
+
+local test = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api({
+    Name = "test", -- name of object
+    Function = function(callback) -- function that is called when toggled
+        if callback then
+            print("enabled")
+        else
+            print("disabled")
+        end
+    end,
+    HoverText = "Placeholder", -- text that will show up after hovering over the button (optional)
+    Default = true, -- enabled on startup (optional)
+    ExtraText = function() return " Placeholder" end -- text that goes next to the button in Text GUI (optional)
+})
+																																																																								
+																																																																									
