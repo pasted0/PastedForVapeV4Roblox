@@ -1,4 +1,4 @@
-print("newmainscript")
+print("loading newmainscript")
 if getgenv and not getgenv().shared then getgenv().shared = {} end
 local errorPopupShown = false
 local setidentity = syn and syn.set_thread_identity or set_thread_identity or setidentity or setthreadidentity or function() end
@@ -96,5 +96,5 @@ if not shared.VapeDeveloper then
 		error("Failed to connect to github, please try using a VPN.")
 	end
 end
-
+print("new main script finished loading")
 return loadstring(vapeGithubRequest("MainScript.lua"))()
