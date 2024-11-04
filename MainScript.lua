@@ -1938,7 +1938,7 @@ GeneralSettings.CreateButton2({
 })
 
 local function loadVape()
-	if not shared.VapeIndependent then
+	if shared.VapeIndependent then
 		loadstring(vapeGithubRequest("Universal.lua"))()
 		if isfile("vape/CustomModules/"..game.PlaceId..".lua") then
 			loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()
