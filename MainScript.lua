@@ -1940,9 +1940,9 @@ GeneralSettings.CreateButton2({
 local function loadVape()
 	if shared.VapeIndependent then
 	return end																																													
-		--[[loadstring(vapeGithubRequest("Universal.lua"))()
+		loadstring(vapeGithubRequest("Universal.lua"))()
 		if isfile("vape/CustomModules/"..game.PlaceId..".lua") then
-			loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()--]]
+			loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()
 		else
 			if not shared.VapeDeveloper then
 				local suc, publicrepo = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/"..readfile("vape/commithash.txt").."/CustomModules/"..game.PlaceId..".lua") end)
