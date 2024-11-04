@@ -1940,7 +1940,7 @@ GeneralSettings.CreateButton2({
 
 --[[GeneralSettings.CreateButton2({
 	Name = "REINJECT",
-	Function = GuiLibrary.SelfDestruct task.wait(0.1) loadstring(game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/refs/heads/main/NewMainScript.lua", true))()
+	Function = GuiLibrary.SelfDestruct task.wait(0.1) loadstring(game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/main/NewMainScript.lua", true))()
 })																																															
 --]]																																												
 local function loadVape()
@@ -1950,7 +1950,7 @@ local function loadVape()
 			loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()
 		else
 			if not shared.VapeDeveloper then
-				local suc, publicrepo = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/"..readfile("vape/commithash.txt").."/CustomModules/"..game.PlaceId..".lua") end)
+				local suc, publicrepo = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/main/"..readfile("vape/commithash.txt").."/CustomModules/"..game.PlaceId..".lua") end)
 				if suc and publicrepo and publicrepo ~= "404: Not Found" then
 					writefile("vape/CustomModules/"..game.PlaceId..".lua", "--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.\n"..publicrepo)
 					loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()
