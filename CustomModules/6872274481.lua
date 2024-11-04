@@ -9012,7 +9012,7 @@ task.spawn(function()
 end)
 
 
-local test = Render.CreateOptionsButton({
+local test = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api({
     Name = "test", -- name of object
     Function = function(callback) -- function that is called when toggled
         if callback then
