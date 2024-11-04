@@ -1938,11 +1938,11 @@ GeneralSettings.CreateButton2({
 	Function = GuiLibrary.SelfDestruct
 })
 
---[[GeneralSettings.CreateButton2({
+GeneralSettings.CreateButton2({
 	Name = "REINJECT",
 	Function = GuiLibrary.SelfDestruct task.wait(0.1) loadstring(game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/refs/heads/main/NewMainScript.lua", true))()
 })																																															
---]]																																														
+																																													
 local function loadVape()
 	if not shared.VapeIndependent then
 		loadstring(vapeGithubRequest("Universal.lua"))()
