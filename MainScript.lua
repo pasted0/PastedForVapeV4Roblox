@@ -143,7 +143,7 @@ local function vapeGithubRequest(scripturl)
 				displayErrorPopup("The connection to github is taking a while, Please be patient.")
 			end
 		end)
-		suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPNG/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
+		suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
 		if not suc or res == "404: Not Found" then
 			displayErrorPopup("Failed to connect to github : vape/"..scripturl.." : "..res)
 			error(res)
@@ -227,7 +227,7 @@ if not isfile("vape/CustomModules/cachechecked.txt") then
 				if isfile(v) and not readfile(v):find("--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.") then
 					local last = v:split('\\')
 					last = last[#last]
-					local suc, publicrepo = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/pasted0/PastedForVapeV4Roblox/"..readfile("vape/commithash.txt").."/CustomModules/"..last) end)
+					local suc, publicrepo = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/CustomModules/"..last) end)
 					if suc and publicrepo and publicrepo ~= "404: Not Found" then
 						writefile("vape/CustomModules/"..last, "--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.\n"..publicrepo)
 					end
@@ -1719,7 +1719,7 @@ GUISettings.CreateToggle({
 	Name = "Blur Background",
 	Function = function(callback)
 		GuiLibrary.MainBlur.Size = (callback and 25 or 0)
-		game:GetService("RunService"):SetRobloxGuiFocused(GuiLibrary.MainGui.ScaledGui.ClickGui.Visible and callback)
+		--game:GetService("RunService"):SetRobloxGuiFocused(GuiLibrary.MainGui.ScaledGui.ClickGui.Visible and callback)
 	end,
 	Default = true,
 	HoverText = "Blur the background of the GUI"
@@ -1857,7 +1857,7 @@ GuiLibrary.SelfDestruct = function()
 	end
 	teleportConnection:Disconnect()
 	GuiLibrary.MainGui:Destroy()
-	game:GetService("RunService"):SetRobloxGuiFocused(false)
+	--game:GetService("RunService"):SetRobloxGuiFocused(false)
 end
 
 GeneralSettings.CreateButton2({
@@ -1944,7 +1944,7 @@ local function loadVape()
 			loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()
 		else
 			if not shared.VapeDeveloper then
-				local suc, publicrepo = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPNG/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/CustomModules/"..game.PlaceId..".lua") end)
+				local suc, publicrepo = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/CustomModules/"..game.PlaceId..".lua") end)
 				if suc and publicrepo and publicrepo ~= "404: Not Found" then
 					writefile("vape/CustomModules/"..game.PlaceId..".lua", "--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.\n"..publicrepo)
 					loadstring(readfile("vape/CustomModules/"..game.PlaceId..".lua"))()
@@ -1987,10 +1987,10 @@ local function loadVape()
 	if shared.VapeOpenGui then
 		GuiLibrary.MainGui.ScaledGui.ClickGui.Visible = true
 		GuiLibrary.MainGui.ScaledGui.LegitGui.Visible = false
-		game:GetService("RunService"):SetRobloxGuiFocused(GuiLibrary.MainBlur.Size ~= 0)
+		--game:GetService("RunService"):SetRobloxGuiFocused(GuiLibrary.MainBlur.Size ~= 0)
 		shared.VapeOpenGui = nil
 	end
-																																															
+
 	coroutine.resume(saveSettingsLoop)
 	shared.VapeFullyLoaded = true
 end
